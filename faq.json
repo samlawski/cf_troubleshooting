@@ -1,8 +1,8 @@
 [
   {
-    "question": "This is a sample question that is a little bit longer than usual messages",
-    "answer": "And this is it's answer!",
-    "module": 5
+    "question": "What is 'jumbotron' (Bootstrap)?",
+    "answer": "'jumbotron' is a <a href=\"http://getbootstrap.com/components/#jumbotron\" target=\"blank\">predefined class in Bootstrap</a>. It is ",
+    "module": 2
   },
   {
     "question": "This is a sample question",

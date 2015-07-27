@@ -1,5 +1,5 @@
 (function(){
-  var app = angular.module('app', ['ngMaterial']).config(
+  var app = angular.module('app', ['ngMaterial', 'ngSanitize']).config(
     function($mdThemingProvider){
       $mdThemingProvider.theme('default')
         .primaryPalette('grey')
