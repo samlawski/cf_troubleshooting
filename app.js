@@ -8,13 +8,19 @@
   );
 
   //Initialize the sidebar
-  app.controller('faq', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll){
+  app.controller('faqCtrl', ['$scope', '$http', '$location', '$anchorScroll', function($scope, $http, $location, $anchorScroll){
+    //jump to answers:
     $scope.scroll = function(id){
       $location.hash(id);
       $anchorScroll();
       //reset url
       $location.hash("");
     };
+
+    // access faq
+    $http.get('/faq.json').success(function(data){
+      $scope.faq = data;
+    });
   }]);
 
 })();

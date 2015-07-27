@@ -12,7 +12,7 @@
 
     	<meta name="viewport" content="initial-scale=1" />
   </head>
-  <body ng-controller="faq" layout="column">
+  <body ng-controller="faqCtrl" layout="column">
 		<md-toolbar class="md-toolbar-tools md-whiteframe-z1">
 			<h1>Troubleshooting common problems</h1>
 			<span flex></span>
@@ -29,45 +29,18 @@
 				<md-content id="questions" class="md-whiteframe-z2">
 					<md-list>
 						<md-subheader>Module 1</md-subheader>
-						<md-list-item ng-click="scroll('module6')">
-								<p>Why does this not work?</p>
-						</md-list-item>
-						<md-list-item ng-click="scroll('2')">
-								<p>Why does this not work?</p>
-						</md-list-item>
-						<md-subheader>Module 1</md-subheader>
-						<md-list-item>
-								<p>Why does this not work?</p>
-						</md-list-item>
-						<md-list-item>
-								<p>Why does this not work?</p>
-						</md-list-item>
-						<md-list-item>
-								<p>My navigation is not full width!</p>
-						</md-list-item>
-						<md-list-item>
-								<p>What is a container?</p>
-						</md-list-item>
-						<md-list-item>
-								<p>What is a jumbotron?</p>
+						<md-list-item ng-repeat="q in faq" ng-click="scroll($index)">
+								<p>{{q.question}}</p>
 						</md-list-item>
 					</md-list>
 				</md-content><!-- list of questions -->
 
 				<md-content layout-padding>
 					<md-subheader>Module 1</md-subheader>
-					<p id="2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
-					<md-subheader>Module 2</md-subheader>
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
-					<md-subheader>Module 3</md-subheader>
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
-					<md-subheader>Module 4</md-subheader>
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
-					<md-subheader>Module 5</md-subheader>
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
-					<md-subheader>Module 6</md-subheader>
-					<p id="module6">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
-
+					<p ng-repeat="a in faq" id="{{$index}}">
+						<strong>{{a.question}}</strong><br>
+						{{a.answer}}
+					</p>
 				</md-content><!-- faq -->
 
 			</md-content><!-- content column -->
