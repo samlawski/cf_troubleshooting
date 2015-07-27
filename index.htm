@@ -36,12 +36,16 @@
 				</md-content><!-- list of questions -->
 
 				<md-content layout-padding>
-					<p ng-repeat="a in faq | orderBy:'module'" id="{{$index}}">
+					<div ng-repeat="a in faq | orderBy:'module'" id="{{$index}}">
 						<!-- TODO fix showing module headers -->
 						<md-subheader ng-show="showModule(a.module)">Module {{a.module}}</md-subheader>
-						<strong>{{a.question}}</strong><br>
-						<span ng-bind-html="a.answer"></span>
-					</p>
+						<md-card>
+							<md-content layout-padding>
+								<h3>{{a.question}}</h3>
+								<p ng-bind-html="a.answer"></p>
+							</md-content>
+						</md-card>
+					</div>
 				</md-content><!-- faq -->
 
 			</md-content><!-- content column -->

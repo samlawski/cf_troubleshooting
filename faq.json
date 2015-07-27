@@ -1,7 +1,7 @@
 [
   {
     "question": "What is 'jumbotron' (Bootstrap)?",
-    "answer": "'jumbotron' is a <a href=\"http://getbootstrap.com/components/#jumbotron\" target=\"blank\">predefined class in Bootstrap</a>. It is ",
+    "answer": "'jumbotron' is a <a href=\"http://getbootstrap.com/components/#jumbotron\" target=\"blank\">predefined class in Bootstrap</a>. It is a component used to catch the attention of your website's user. Generally people put a few lines like a welcome text and maybe a button in there. Do <strong>not</strong> wrap it around all content on your website!",
     "module": 2
   },
   {
