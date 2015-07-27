@@ -28,16 +28,15 @@
 
 				<md-content id="questions" class="md-whiteframe-z2">
 					<md-list>
-						<md-subheader>Module 1</md-subheader>
-						<md-list-item ng-repeat="q in faq" ng-click="scroll($index)">
-								<p>{{q.question}}</p>
+						<md-list-item ng-repeat="q in faq | orderBy:'module'" ng-click="scroll($index)">
+								<md-subheader>M. {{q.module}}</md-subheader><p class="question">{{q.question}}</p>
 						</md-list-item>
 					</md-list>
 				</md-content><!-- list of questions -->
 
 				<md-content layout-padding>
 					<md-subheader>Module 1</md-subheader>
-					<p ng-repeat="a in faq" id="{{$index}}">
+					<p ng-repeat="a in faq | orderBy:'module'" id="{{$index}}">
 						<strong>{{a.question}}</strong><br>
 						{{a.answer}}
 					</p>
