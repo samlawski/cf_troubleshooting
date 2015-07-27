@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="app">
 	<head>
-      <title></title>
+      <title>CF: Troubleshooting</title>
 
 			<!-- Angular Material -->
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
@@ -12,9 +12,30 @@
 
     	<meta name="viewport" content="initial-scale=1" />
   </head>
-  <body ng-controller="AppCtrl">
+  <body ng-controller="AppCtrl" layout="column">
+		<md-toolbar class="md-toolbar-tools">
+			<h1>Troubleshooting common problems</h1>
+		</md-toolbar>
 
+		<div layout="row" layout-align="center start">
+			<md-content layout-padding layout="column" flex="100" flex-gt-sm="80" flex-gt-md="60" flex-gt-lg="50">
 
+				<md-content class="md-whiteframe-z2">
+					<md-list>
+						<md-list-item>
+								<p>Why does this not work?</p>
+						</md-list-item>
+						<md-list-item>
+								<p>Why does this not work?</p>
+						</md-list-item>
+						<md-list-item>
+								<p>Why does this not work?</p>
+						</md-list-item>
+					</md-list>
+				</md-content>
+
+			</md-content>
+		</div><!-- row -->
 
 		<!-- Javascript Dependencies -->
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
