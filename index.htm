@@ -24,8 +24,8 @@
 		</md-toolbar>
 
 		<md-content><!-- MAIN -->
-			<div layout="row" layout-align="center start" ng-cloak><!-- QUESTIONS -->
-				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60" id="questions">
+			<div id="questions" layout="row" layout-align="center start" ng-cloak><!-- QUESTIONS -->
+				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60">
 					<md-list>
 						<md-list-item ng-repeat="q in faq | orderBy:'module'" ng-click="scroll($index)" layout="row">
 							<md-subheader layout="column" flex="20"><span ng-hide="q.module == 0">M. {{q.module}}</span></md-subheader>

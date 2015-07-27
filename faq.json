@@ -1,37 +1,52 @@
 [
   {
-    "question": "What is 'jumbotron' (Bootstrap)?",
-    "answer": "'jumbotron' is a <a href=\"http://getbootstrap.com/components/#jumbotron\" target=\"blank\">predefined class in Bootstrap</a>. It is a component used to catch the attention of your website's user. Generally people put a few lines like a welcome text and maybe a button in there. Do <strong>not</strong> wrap it around all content on your website!",
-    "module": 2
-  },
-  {
-    "question": "Test question",
-    "answer": "And this is it's answer!",
+    "question": "Why should I use correct indentation?",
+    "answer": "To keep the overview. Code gets quickly very long and if you don't indent correctly you will find it really hard to keep track of which elements are inside which other elements and which tags belong together.<br>Plus for many employers it's a K.O. argument if the applicant doesn't indent correctly.",
     "module": 0
   },
   {
-    "question": "This is a sample question",
-    "answer": "And this is it's answer!",
-    "module": 5
+    "question": "What do I need comments for and how do I use them best?",
+    "answer": "Commenting is a good way to make your code more readable for yourself and others. Either people who work with you or possible employers or yourself a few weeks after writing the original code, all these people will highly appreciate well commented code. In JavaScript you can use it to explain functionality. In CSS you can use it to separate your code into groups (for example you can put stylings for specific pages in groups displayed with comments). In HTML It is often times extremly useful to put comments behind <strong>every single</strong> closing div tag. When you use Bootstrap it is very likely you end up having 3 or more div closing tags in a row. To keep track of which opening tag they belong to it is a good idea to put a comment behind each one of them with a description of which opening tag they belong to.",
+    "module": 0
   },
   {
-    "question": "This is a sample question",
-    "answer": "And this is it's answer!",
-    "module": 3
+    "question": "What is 'jumbotron' (Bootstrap)?",
+    "answer": "'jumbotron' is a <a href=\"http://getbootstrap.com/components/#jumbotron\" target=\"blank\">predefined class in Bootstrap</a>. It is a component used to catch the attention of your website's user. Generally people put a few lines like a welcome text and maybe a button in there. Do <strong>not</strong> wrap it around all content on your website!",
+    "module": 1
   },
   {
-    "question": "This is a sample question",
-    "answer": "And this is it's answer!",
-    "module": 3
+    "question": "What does 'container' do (Bootstrap)?",
+    "answer": "...",
+    "module": 1
   },
   {
-    "question": "This is a sample question",
-    "answer": "And this is it's answer!",
-    "module": 12
+    "question": "My layout is messed up / My website has a white area on the right ",
+    "answer": "...",
+    "module": 2
   },
   {
-    "question": "Another example question",
-    "answer": "Another example answer",
+    "question": "My navigation is shifted and not full width",
+    "answer": "...",
+    "module": 2
+  },
+  {
+    "question": "My website is responsive when I resize my browser window - but not on my phone.",
+    "answer": "So that your website is displayed correctly you need to add a meta tag with the name 'viewport' to set the initial scale of your website: <a href=\"http://getbootstrap.com/css/#overview-mobile\" target=\"blank\">http://getbootstrap.com/css/#overview-mobile</a>",
+    "module": 2
+  },
+  {
+    "question": "Do I need the normalize.css and Boostrap?",
+    "answer": "No. Boostrap has some normalizing code already included.",
+    "module": 2
+  },
+  {
+    "question": "What is the difference between the CDN link to boostrap.css and the bootstrap.css file I downloaded and put in my project folder?",
+    "answer": "Both files contain exatly the same code. So <strong>never include both files</strong> in your HTML head. The CDN link is faster to work with and can possibly lower load times for your user if he already accessed a website using Bootstrap before. Downloading the bootstrap.css allows you to be independent from other servers. Also you can <a href=\"http://getbootstrap.com/customize/\" target=\"blank\">customize the Bootstrap CSS</a> and take out elements you don't need to save load time.",
+    "module": 2
+  },
+  {
+    "question": "Some parts of my JavaScript don't seem to run correctly.",
+    "answer": "Check the 'head' of your website and make sure to put <strong>all</strong> your script tags <strong>below</strong> your link tags. JavaScript files always come at the bottom and all your CSS needs to be above them to make sure everything loads properly.",
     "module": 3
   }
 ]
