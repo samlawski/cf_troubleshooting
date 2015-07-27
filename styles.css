@@ -8,12 +8,16 @@
   margin-bottom: 20px;
 }
 
+#questions p {
+  line-height: 1.2em;
+}
+
+#questions md-list-item {
+  border-bottom: 1px solid #eee;
+}
+
 #backtotop {
   position: fixed;
   bottom: 30px;
   right: 30px;
-}
-
-.question {
-  line-height: 1em;
 }

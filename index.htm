@@ -23,19 +23,20 @@
 			</a>
 		</md-toolbar>
 
-		<md-content layout="row" layout-align="center start">
-			<md-content layout-padding layout="column" flex="100" flex-gt-sm="80" flex-gt-md="60" flex-gt-lg="50" ng-cloak>
-
-				<md-content id="questions" class="md-whiteframe-z2">
+		<md-content><!-- MAIN -->
+			<div layout="row" layout-align="center start" ng-cloak><!-- QUESTIONS -->
+				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60" id="questions">
 					<md-list>
-						<md-list-item ng-repeat="q in faq | orderBy:'module'" ng-click="scroll($index)">
-								<md-subheader ng-hide="q.module == 0">M. {{q.module}}</md-subheader>
-								<p class="question">{{q.question}}</p>
+						<md-list-item ng-repeat="q in faq | orderBy:'module'" ng-click="scroll($index)" layout="row">
+							<md-subheader layout="column" flex="20"><span ng-hide="q.module == 0">M. {{q.module}}</span></md-subheader>
+							<p layout="column" flex="90">{{q.question}}</p>
 						</md-list-item>
 					</md-list>
-				</md-content><!-- list of questions -->
+				</md-content>
+			</div><!-- //QUESTIONS -->
 
-				<md-content layout-padding>
+			<div class="md-whiteframe-z3" layout="row" layout-align="center start" ng-cloak><!-- ANSWERS -->
+				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60" layout-padding>
 					<div ng-repeat="a in faq | orderBy:'module'" id="{{$index}}">
 						<!-- TODO fix showing module headers -->
 						<md-subheader ng-show="showModule(a.module)">Module {{a.module}}</md-subheader>
@@ -46,14 +47,14 @@
 							</md-content>
 						</md-card>
 					</div>
-				</md-content><!-- faq -->
+				</md-content>
+			</div><!-- //ANSWERS -->
+		</md-content><!-- //MAIN -->
 
-			</md-content><!-- content column -->
+		<md-button id="backtotop" ng-click="scroll('questions')" class="md-fab" aria-label="FAB" ng-cloak>
+			<md-icon>keyboard_arrow_up</md-icon>
+		</md-button>
 
-			<md-button id="backtotop" ng-click="scroll('questions')" class="md-fab" aria-label="FAB" ng-cloak>
-				<md-icon>keyboard_arrow_up</md-icon>
-			</md-button>
-		</md-content><!-- row -->
 
 		<!-- Javascript Dependencies -->
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
