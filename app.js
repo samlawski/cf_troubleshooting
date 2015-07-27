@@ -13,6 +13,8 @@
       console.log(id);
       $location.hash(id);
       $anchorScroll();
+      //reset url
+      $location.hash("");
     };
   }]);
 
