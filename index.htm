@@ -16,15 +16,15 @@
 		<md-toolbar class="md-toolbar-tools md-whiteframe-z1">
 			<h1>Troubleshooting common problems</h1>
 			<span flex></span>
-			<h2 hide-sm>Contribute:</h2>
-			<a href="https://github.com/jimbroski/cf_faq" target="blank" md-button class="md-icon-button">
+			<h2 hide-sm ng-cloak>Contribute:</h2>
+			<a href="https://github.com/jimbroski/cf_faq" target="blank" md-button class="md-icon-button" ng-cloak>
 				<md-icon>code</md-icon>
 				<md-tooltip>Contribute!</md-tooltip>
 			</a>
 		</md-toolbar>
 
 		<md-content layout="row" layout-align="center start">
-			<md-content layout-padding layout="column" flex="100" flex-gt-sm="80" flex-gt-md="60" flex-gt-lg="50">
+			<md-content layout-padding layout="column" flex="100" flex-gt-sm="80" flex-gt-md="60" flex-gt-lg="50" ng-cloak>
 
 				<md-content id="questions" class="md-whiteframe-z2">
 					<md-list>
@@ -36,8 +36,9 @@
 				</md-content><!-- list of questions -->
 
 				<md-content layout-padding>
-					<md-subheader>Module 1</md-subheader>
 					<p ng-repeat="a in faq | orderBy:'module'" id="{{$index}}">
+						<!-- TODO fix showing module headers -->
+						<md-subheader ng-show="showModule(a.module)">Module {{a.module}}</md-subheader>
 						<strong>{{a.question}}</strong><br>
 						{{a.answer}}
 					</p>
@@ -45,7 +46,7 @@
 
 			</md-content><!-- content column -->
 
-			<md-button id="backtotop" ng-click="scroll('questions')" class="md-fab" aria-label="FAB">
+			<md-button id="backtotop" ng-click="scroll('questions')" class="md-fab" aria-label="FAB" ng-cloak>
 				<md-icon>keyboard_arrow_up</md-icon>
 			</md-button>
 		</md-content><!-- row -->
