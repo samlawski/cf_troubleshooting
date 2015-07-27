@@ -29,7 +29,8 @@
 				<md-content id="questions" class="md-whiteframe-z2">
 					<md-list>
 						<md-list-item ng-repeat="q in faq | orderBy:'module'" ng-click="scroll($index)">
-								<md-subheader>M. {{q.module}}</md-subheader><p class="question">{{q.question}}</p>
+								<md-subheader ng-hide="q.module == 0">M. {{q.module}}</md-subheader>
+								<p class="question">{{q.question}}</p>
 						</md-list-item>
 					</md-list>
 				</md-content><!-- list of questions -->
