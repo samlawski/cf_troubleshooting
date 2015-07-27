@@ -8,8 +8,12 @@
   );
 
   //Initialize the sidebar
-  app.controller('AppCtrl', ['$scope', function($scope){
-
+  app.controller('faq', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll){
+    $scope.scroll = function(id){
+      console.log(id);
+      $location.hash(id);
+      $anchorScroll();
+    };
   }]);
 
 })();

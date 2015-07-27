@@ -12,7 +12,7 @@
 
     	<meta name="viewport" content="initial-scale=1" />
   </head>
-  <body ng-controller="AppCtrl" layout="column">
+  <body ng-controller="faq" layout="column">
 		<md-toolbar class="md-toolbar-tools md-whiteframe-z1">
 			<h1>Troubleshooting common problems</h1>
 		</md-toolbar>
@@ -20,10 +20,24 @@
 		<md-content layout="row" layout-align="center start">
 			<md-content layout-padding layout="column" flex="100" flex-gt-sm="80" flex-gt-md="60" flex-gt-lg="50">
 
-				<md-content class="md-whiteframe-z2">
+				<md-content class="md-whiteframe-z2 questions">
 					<md-list>
-						<md-list-item ng-click>
-								<a href="#">Why does this not work?</a>
+						<md-subheader>Module 1</md-subheader>
+						<md-list-item ng-click="scroll('module6')">
+								<p>Why does this not work?</p>
+						</md-list-item>
+						<md-list-item ng-click="scroll('2')">
+								<p>Why does this not work?</p>
+						</md-list-item>
+						<md-subheader>Module 1</md-subheader>
+						<md-list-item>
+								<p>Why does this not work?</p>
+						</md-list-item>
+						<md-list-item>
+								<p>Why does this not work?</p>
+						</md-list-item>
+						<md-list-item>
+								<p>Why does this not work?</p>
 						</md-list-item>
 						<md-list-item>
 								<p>Why does this not work?</p>
@@ -33,6 +47,22 @@
 						</md-list-item>
 					</md-list>
 				</md-content><!-- list of questions -->
+
+				<md-content layout-padding>
+					<md-subheader>Module 1</md-subheader>
+					<p id="2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+					<md-subheader>Module 2</md-subheader>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+					<md-subheader>Module 3</md-subheader>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+					<md-subheader>Module 4</md-subheader>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+					<md-subheader>Module 5</md-subheader>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+					<md-subheader>Module 6</md-subheader>
+					<p id="module6">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+
+				</md-content><!-- faq -->
 
 			</md-content><!-- content column -->
 		</md-content><!-- row -->
