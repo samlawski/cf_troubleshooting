@@ -10,7 +10,7 @@
   //Initialize the sidebar
   app.controller('faqCtrl', ['$scope', '$http', '$location', '$anchorScroll', function($scope, $http, $location, $anchorScroll){
     // access faq
-    $http.get('/faq.json').success(function(data){
+    $http.get('faq.json').success(function(data){
       $scope.faq = data;
     });
 
