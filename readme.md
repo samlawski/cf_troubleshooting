@@ -10,5 +10,10 @@ Some notes about contributing:
  2. The questions in the JSON file are ordered according to their module number.
  3. You may use HTML inside the "answer" string (but **not** inside the "question"). Remember to use a backslash \ before all quotes " (except single quotes ' ).
  4. To display actual HTML code you may use &#60 to display < and &#62 to display >.
- 5. In order to indent elements in your answer you may use the helper classes (indent1, indent2, indent3, indent4)
+	 For example: `&#60div&#62` turns into `<div>`
+ 5. In order to indent elements in your answer you may use the helper classes (indent1, indent2, indent3, indent4).
+	 For example:
+	 `<span class=\"indent1\">&#60div&#62</span>`
  6. There are also classes for colors to help you visualize something: .red, .blue, .green, .orange, .pink
+	 For example:
+	 `<span class=\"indent2 red\">&#60div&#62</span>`
