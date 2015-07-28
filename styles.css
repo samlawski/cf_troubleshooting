@@ -5,15 +5,24 @@
 /* -------------------------- */
 
 #questions {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  background-color: #f5f5f5;
+}
+
+#questions md-content, #questions .md-subheader {
+  background-color: transparent;
+}
+
+#questions button:hover {
+  background-color: rgba(255,255,255,0.4)
+}
+
+#questions md-list-item {
+  border-bottom: 1px solid #ddd;
 }
 
 #questions p {
   line-height: 1.2em;
-}
-
-#questions md-list-item {
-  border-bottom: 1px solid #eee;
 }
 
 #backtotop {
