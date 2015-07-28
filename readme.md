@@ -1,7 +1,6 @@
 # General #
 This is a simple website built to provide quick help for beginners who learn programming and run into common problems.
 
-
 # How to contribute #
 You are welcome to contribute to this project by adding questions or fixing mistakes in existing questions and/or answers.
 Some notes about contributing:
