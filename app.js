@@ -19,7 +19,7 @@
       $location.hash(id);
       $anchorScroll();
       //reset url
-      $location.hash("");
+      //$location.hash("");
     };
 
     //show subheaders

@@ -1,7 +1,7 @@
 [
   {
     "question": "Why should I use indentation? How do I indent correctly?",
-    "answer": "To keep the overview. Code gets quickly very long and if you don't indent correctly you will find it really hard to keep track of which elements are inside which other elements and which tags belong together.<br>Generally speaking you indent everything that's between an opening &#60...&#62 and closing tag &#60/...&#62 once.<br> An example might look like this:<p><span>&#60parent&#62</span><br> <span class=\"indent1\">&#60first-child&#62</span>some content<span>&#60/first-child&#62</span><br> <span class=\"indent1\">&#60second-child&#62</span>some content<span>&#60/second-child&#62</span><br> <span class=\"indent1\">&#60third-child&#62</span>some content<span>&#60/third-child&#62</span><br> <span>&#60/parent&#62</span></p> Notice how all three children are indented on the same level. That's because their closing tags are before the next opening tag. That's why they are also called siblings because they are all children of the same parents.<br> Just like in a real family children can become parents again. That's how we get multiple indentations: <p><span class=\"orange\">&#60great_grandparent&#62</span><br> <span class=\"indent1 pink\">&#60grandparents1&#62</span><br> <span class=\"indent2 red\">&#60parents1&#62</span><br> <span class=\"indent3 blue\">&#60child1&#62</span><br> <span class=\"indent4 green\">&#60grandchild&#62</span>some content<span class=\"green\">&#60/grandchild&#62</span><br> <span class=\"indent3 blue\">&#60/child1&#62</span><br> <span class=\"indent3 blue\">&#60child2&#62</span><br> <span class=\"indent4 green\">Some content</span><br> <span class=\"indent3 blue\">&#60/child2&#62</span><br> <span class=\"indent2 red\">&#60/parents1&#62</span><br> <span class=\"indent2 red\">&#60parents2&#62</span><br> <span class=\"indent3 blue\">Some content</span><br> <span class=\"indent2 red\">&#60/parents2&#62</span><br> <span class=\"indent1 pink\">&#60/grandparents1&#62</span><br> <span class=\"indent1 pink\">&#60grandparents2&#62</span><br> <span class=\"indent2 red\">Some content</span><br> <span class=\"indent1 pink\">&#60/grandparents2&#62</span><br> <span class=\"orange\">&#60/great_grandparent&#62</span></p>",
+    "answer": "To keep the overview. Code gets quickly very long and if you don't indent correctly you will find it really hard to keep track of which elements are inside which other elements and which tags belong together.<br>Generally speaking you indent everything that's between an opening &#60...&#62 and closing tag &#60/...&#62 once.<br> An example might look like this:<p><span>&#60parent&#62</span><br> <span class=\"indent1\">&#60first-child&#62</span>some content<span>&#60/first-child&#62</span><br> <span class=\"indent1\">&#60second-child&#62</span>some content<span>&#60/second-child&#62</span><br> <span class=\"indent1\">&#60third-child&#62</span>some content<span>&#60/third-child&#62</span><br> <span>&#60/parent&#62</span></p> Notice how all three children are indented on the same level. That's because their closing tags are before the next opening tag. That's why they are also called siblings because they are all children of the same parents.<br> Just like in a real family children can become parents again. That's how we get multiple indentations: <p><span class=\"orange\">&#60great_grandparent&#62</span><br> <span class=\"indent1 pink\">&#60grandparents1&#62</span><br> <span class=\"indent2 red\">&#60parents1&#62</span><br> <span class=\"indent3 blue\">&#60child1&#62</span><br> <span class=\"indent4 green\">&#60grandchild&#62</span>some content<span class=\"green\">&#60/grandchild&#62</span><br> <span class=\"indent3 blue\">&#60/child1&#62</span><br> <span class=\"indent3 blue\">&#60child2&#62</span><br> <span class=\"indent4 green\">Some content</span><br> <span class=\"indent3 blue\">&#60/child2&#62</span><br> <span class=\"indent2 red\">&#60/parents1&#62</span><br> <span class=\"indent2 red\">&#60parents2&#62</span><br> <span class=\"indent3 blue\">Some content</span><br> <span class=\"indent2 red\">&#60/parents2&#62</span><br> <span class=\"indent1 pink\">&#60/grandparents1&#62</span><br> <span class=\"indent1 pink\">&#60grandparents2&#62</span><br> <span class=\"indent2 red\">Some content</span><br> <span class=\"indent1 pink\">&#60/grandparents2&#62</span><br> <span class=\"orange\">&#60/great_grandparent&#62</span></p> The grandparents are siblings, thus on the same level. The parents are all on the same level. The children are as well and so on.",
     "module": 0
   },
   {
@@ -16,17 +16,22 @@
   },
   {
     "question": "What does 'container' do (Bootstrap)?",
-    "answer": "...",
+    "answer": "'container' is a <a href=\"http://getbootstrap.com/css/#overview-container\" target=\"blank\">predefined class in Bootstrap</a>. Containers are needed if you want to make use of the <a href=\"http://getbootstrap.com/css/#grid\" target=\"blank\">Bootstrap Grid-System</a>. That's why they usually house a big chunk of a pages content. In many cases one container per page is enough. They fill the full width of their parent element. Containers <strong>should not</strong> be nested inside each other.",
     "module": 1
   },
   {
-    "question": "My layout is messed up / My website has a white area on the right ",
-    "answer": "...",
+    "question": "How do I use Google Fonts?",
+    "answer": "Admittedly Google Fonts are not very intuitive for beginners. With the filters to the right of <a href=\"https://www.google.com/fonts/\" target=\"blank\">their page</a> you can filter the different fonts and look for one you like. Once you found one you click on the second of the three buttons at the bottom of the font (it has a little box with an arrow pointing to the right). This will bring you to a page where you can do final customizations of the font and what you might need. Then you scroll to the third step and cope the link tag. Now you can paste it inside the HTML file where you want to use the font <strong>before</strong> your other link tags that point to your CSS files. The fourth step will show you how to use the font inside your CSS after you embedded it in your HTML file.",
+    "module": 1
+  },
+  {
+    "question": "My layout is messed up and I don't know why! / My website has a white area on the right! ",
+    "answer": "Bootstrap provides great classes to layout your website. If you use Bootstrap it is important that you follow its rules. You will find that you can do most of your layouting without writing a single line of CSS code.<br> Most mistakes happen because the <a href=\"http://getbootstrap.com/css/#grid\" target=\"blank\">grid system</a> is not used correctly or messed up with custom CSS. Read the <a href=\"http://getbootstrap.com/css/#grid\" target=\"blank\">Bootstrap documentation about their grid system</a>! You will see that you need to have a container(-fluid) if you want to use your grid. A row must be a direct child of a container and all your col- elements must be direct decendents of your row.<br> Also keep in mind that the grid system is there to structure your website into 12 columns. It is like the wooden frame of a painting. It's behind the actual painting to keep it stable but it's invisible for the user. If you want to change padding, margin, height, position or any other layouting styles <strong>do not change Bootstrap's grid-classes (.container(-fluid), .row, .col- etc.)!</strong> That will easily mess up your layout. Rather create a new div for example inside your div with the class .col-xs-12 and give it your own class (e.g. .padding-left). Then you can apply your own padding and positioning styles but don't damage the frame that's supposed to keep your website stable.",
     "module": 2
   },
   {
-    "question": "My navigation is shifted and not full width",
-    "answer": "...",
+    "question": "I have problems with positioning my elements! / My navigation is shifted and not full width!",
+    "answer": "Keep your HTML code in the same order in which you want to display the content on your website. Code that's all the way at the top of the page should also be all the way at the top in your HTML code (e.g. a header or a navigation bar). Content that's all the way at the bottom (like a footer) should also be all the way at the bottom in your code. Also keep in mind to put something inside an element if it really belongs in there. For example a navigation bar is usually all the way at the top of the page and not part of the content you might keep inside Bootstrap's grid system.",
     "module": 2
   },
   {
@@ -36,7 +41,7 @@
   },
   {
     "question": "Do I need the normalize.css and Boostrap?",
-    "answer": "No. Boostrap has some normalizing code already included.",
+    "answer": "No. Boostrap has the <a href=\"http://getbootstrap.com/css/#overview-normalize\" target=\"blank\">normalize.css</a> already included.",
     "module": 2
   },
   {
