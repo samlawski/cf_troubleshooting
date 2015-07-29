@@ -63,5 +63,20 @@
     "question": "Some parts of my JavaScript don't seem to run correctly.",
     "answer": "Check the &#60head&#62 of your website and make sure to put <strong>all</strong> your &#60script&#62 tags <strong>below</strong> your &#60link&#62 tags. JavaScript files always come at the bottom and all your CSS needs to be above them to make sure everything loads properly.",
     "module": 3
+  },
+  {
+    "question": "How do I add JavaScript to my Rails application?",
+    "answer": "Just like your CSS JavaScript is handled by the <a href=\"http://guides.rubyonrails.org/asset_pipeline.html\" target=\"blank\">asset pipeline</a>. All JavaScript files you put inside assets/javascript will be ready to be used in your views.",
+    "module": 12
+  },
+  {
+    "question": "$(document).ready doesn't seem to work in Rails",
+    "answer": "That is correct. This is because Rails uses the <a href=\"http://railscasts.com/episodes/390-turbolinks\" target=\"blank\">turbo links gem</a>. This causes your pages not to load fully but only parts of your page. $(document).ready you can use some alternative code: <a href=\"http://stackoverflow.com/a/18770589/4587875\" target=\"blank\">Here the link to Stackoverflow</a>",
+    "module": 12
+  },
+  {
+    "question": "What do I need client side MVCs like Angular.js and Ember.js for?",
+    "answer": "This very website is built with Angular.js . Client side MVC frameworks allow your users to interact with your websites content dynamically without accessing any server side code. You can use it to store your websites content in a different place than you website design. This website for example keeps all questions and answers in a single <a href=\"http://json.org/\" target=\"blank\">JSON</a> file. This makes it easy to edit content without having to worry about the layout.",
+    "module": 12
   }
 ]
