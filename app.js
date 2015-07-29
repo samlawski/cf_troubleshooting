@@ -2,8 +2,8 @@
   var app = angular.module('app', ['ngMaterial', 'ngSanitize']).config(
     function($mdThemingProvider){
       $mdThemingProvider.theme('default')
-        .primaryPalette('grey')
-        .accentPalette('teal');
+        .primaryPalette('cyan')
+        .accentPalette('blue-grey');
     }
   );
 
