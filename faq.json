@@ -76,7 +76,7 @@
   },
   {
     "question": "What do I need client side MVCs like Angular.js and Ember.js for?",
-    "answer": "This very website is built with Angular.js . Client side MVC frameworks allow your users to interact with your websites content dynamically without accessing any server side code. You can use it to store your websites content in a different place than you website design. This website for example keeps all questions and answers in a single <a href=\"http://json.org/\" target=\"blank\">JSON</a> file. This makes it easy to edit content without having to worry about the layout.",
+    "answer": "This very website is built with Angular.js . Client side MVC frameworks allow your users to interact with your websites content dynamically without accessing any server side code.<br> You can also use it to store your websites content in a different place than you website design. This website for example keeps all questions and answers in a single <a href=\"http://json.org/\" target=\"blank\">JSON</a> file. This makes it easy to edit content without having to worry about the layout.",
     "module": 12
   }
 ]
