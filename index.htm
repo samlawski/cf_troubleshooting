@@ -35,7 +35,7 @@
 				</md-content>
 			</div><!-- //QUESTIONS -->
 
-			<div class="md-whiteframe-z3" layout="row" layout-align="center start" ng-cloak><!-- ANSWERS -->
+			<div id="answers" class="md-whiteframe-z3" layout="row" layout-align="center start" ng-cloak><!-- ANSWERS -->
 				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60" layout-padding>
 					<div ng-repeat="a in faq | orderBy:'module'" id="{{$index}}">
 						<!-- TODO fix showing module headers -->
