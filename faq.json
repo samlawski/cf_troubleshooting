@@ -56,7 +56,7 @@
   },
   {
     "question": "What is the difference between the CDN link to boostrap.css and the bootstrap.css file I downloaded and put in my project folder?",
-    "answer": "Both files contain exactly the same code. So <strong>never include both files</strong> in your HTML head. The CDN link is faster to work with and can possibly lower load times for your user if he already accessed a website using Bootstrap before. Downloading the bootstrap.css allows you to be independent from other servers. Also you can <a href=\"http://getbootstrap.com/customize/\" target=\"blank\">customize the Bootstrap CSS</a> and take out elements you don't need to save load time.",
+    "answer": "Both of the following two lines do the same thing:<br> <span class=\"pink\">&#60link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/<strong><u>bootstrap.min.css</u></strong>\" rel=\"stylesheet\"&#62</span><br> <span class=\"orange\">&#60link href=\"css/<strong><u>bootstrap.min.css</u></strong>\" rel=\"stylesheet\"&#62</span> <br>Both files contain exactly the same code. So <strong>never include both files</strong> in your HTML head. The first line is a link to the bootstrap.css file that lies on a different server somewhere online. It is faster to work with and can possibly lower load times for your user if he already accessed a website using Bootstrap before. The second link points to a local copy of the bootstrap.css file. Downloading the bootstrap.css allows you to be independent from other servers. Also you can <a href=\"http://getbootstrap.com/customize/\" target=\"blank\">customize the Bootstrap CSS</a> and take out elements you don't need to save load time.",
     "module": 2
   },
   {
