@@ -35,6 +35,11 @@
     "module": 1
   },
   {
+    "question": "How should I organize my CSS?",
+    "answer": "Most websites use the same design throughout all pages (with a few custom elements on some pages). That's why it is generally a good idea to keep all your CSS in a single styles.css file (except for CSS coming from frameworks or plugins like bootstrap.css and normalize.css). This way you can define general styling and access that everywhere inside your website and don't have to repeat the same styling over and over again. Only if you are absolutely certain you will use a particular styling only on a single page, it makes sense to create a new CSS file. Otherwise you might seperate your CSS code into groups with comments (see also the section about comments on this page).",
+    "module": 1
+  },
+  {
     "question": "My layout is messed up and I don't know why! / My website has a white area on the right! ",
     "answer": "Bootstrap provides great classes to layout your website. If you use Bootstrap it is important that you follow its rules. You will find that you can do most of your layouting without writing a single line of CSS code.<br> Most mistakes happen because the <a href=\"http://getbootstrap.com/css/#grid\" target=\"blank\">grid system</a> is not used correctly or messed up with custom CSS. Read the <a href=\"http://getbootstrap.com/css/#grid\" target=\"blank\">Bootstrap documentation about their grid system</a>! You will see that you need to have a container(-fluid) if you want to use your grid. A row must be a direct child of a container and all your col- elements must be direct decendents of your row.<br> Also keep in mind that the grid system is there to structure your website into 12 columns. It is like the wooden frame of a painting. It's behind the actual painting to keep it stable but it's invisible for the user. If you want to change padding, margin, height, position or any other layouting styles <strong>do not change Bootstrap's grid-classes (.container(-fluid), .row, .col- etc.)!</strong> That will easily mess up your layout. Rather create a new div for example inside your div with the class .col-xs-12 and give it your own class (e.g. .padding-left). Then you can apply your own padding and positioning styles but don't damage the frame that's supposed to keep your website stable.",
     "module": 2
