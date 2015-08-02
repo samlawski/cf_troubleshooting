@@ -70,6 +70,16 @@
     "module": 3
   },
   {
+    "question": "How do I test associated models?",
+    "answer": "When testing a model that <i>belongs_to</i> another model you have to remember creating the model it belongs to. You can create both in your 'before' block like this:<p class=\"orange\"> @product = Product.new(name: \"boat\", price 20)<br>@review = @product.reviews.build(rating: 4) </p> Now you will be able to access @review or even @review.product anywhere in your tests.",
+    "module": 10
+  },
+  {
+    "question": "How do I test with my controllerst that use authentication with Devise?",
+    "answer": "You will have to <a href=\"https://github.com/plataformatec/devise/wiki/How-To:-Test-controllers-with-Rails-3-and-4-(and-RSpec)#controller-specs\" target=\"blank\">add a few lines to your rails_helper or specs_helper</a> file. This will enable you to use the 'sign_in' helper to sign in a user inside your 'before' block. The absolute simplest way this could look like is this (inside your describe ProductsController):<br><br> before do <br><span class=\"indent1\">@user = User.create(email: \"max@mustermann.de\", password: \"12345678\")</span><br>end <br><br>context \"GET #index\" do <br><span class=\"indent1\">before do</span> <br><span class=\"indent2\"> sign_in @user</span> <br><span class=\"indent2\">get :index, id: @user.id</span> <br><span class=\"indent1\">end</span> <br>[...]",
+    "module": 10
+  },
+  {
     "question": "How do I add JavaScript to my Rails application?",
     "answer": "Just like your CSS JavaScript is handled by the <a href=\"http://guides.rubyonrails.org/asset_pipeline.html\" target=\"blank\">asset pipeline</a>. All JavaScript files you put inside assets/javascript will be ready to be used in your views.",
     "module": 12
