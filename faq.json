@@ -80,6 +80,11 @@
     "module": 10
   },
   {
+    "question": "Are there any more free recourses on the about testing with RSpec?",
+    "answer": "There are a few. You can take a look at these links:<br> <ul><li><a href=\"https://www.railstutorial.org/book/_single-page#sec-getting_started_with_testing\" target=\"blank\">This is a general book on Rails and it will explain the concept of testing (without RSpec!)</a></li> <li><a href=\"http://everydayrails.com/2012/04/07/testing-series-rspec-controllers.html\" target=\"blank\">A short tutorial for controller tests with RSpec</a></li> <li><a href=\"http://www.relishapp.com/rspec/rspec-rails/v/3-3/docs/controller-specs\" target=\"blank\">The official RSpec documentation</a></li> </ul><br>If you google the topic you might also come across video tutorials provided by CodeSchool. As of now their material, unfortunately, is deprecated and most of what they teach about RSpec is not usable in the most recent version of RSpec.",
+    "module": 10
+  },
+  {
     "question": "How do I add JavaScript to my Rails application?",
     "answer": "Just like your CSS JavaScript is handled by the <a href=\"http://guides.rubyonrails.org/asset_pipeline.html\" target=\"blank\">asset pipeline</a>. All JavaScript files you put inside assets/javascript will be ready to be used in your views.",
     "module": 12
@@ -92,6 +97,11 @@
   {
     "question": "What do I need client side MVCs like Angular.js and Ember.js for?",
     "answer": "This very website is built with Angular.js . Client side MVC frameworks allow your users to interact with your websites content dynamically without accessing any server side code.<br> You can also use it to store your websites content in a different place than you website design. This website for example keeps all questions and answers in a single <a href=\"http://json.org/\" target=\"blank\">JSON</a> file. This makes it easy to edit content without having to worry about the layout.",
+    "module": 12
+  },
+  {
+    "question": "Are there any more free recourses on the internet about AJAX and Rails?",
+    "answer": "Rails makes dealing with AJAX relatively easy. But there are some good recourses you might want to take a look at:<br> <ul><li><a href=\"https://www.youtube.com/watch?v=FBxVN7U1Qsk\" target=\"blank\">RailsCast about AJAX</a></li> <li><a href=\"http://www.gotealeaf.com/blog/the-detailed-guide-on-how-ajax-works-with-ruby-on-rails\" target=\"blank\">Short AJAX and Rails tutorial</a></li> </ul><br>",
     "module": 12
   }
 ]
