@@ -70,6 +70,11 @@
     "module": 3
   },
   {
+    "question": "How do I get Ruby and Rails up and running on Windows?",
+    "answer": "A mentor at CF created a great and detailed explanation including template files you need on GitHub: <a href=\"https://github.com/simonbacquie/cf-vagrant-rails\" target=\"blank\">https://github.com/simonbacquie/cf-vagrant-rails</a><br> He uses VirtualBox and Vagrant to install linux on a virtual machine within your Windows OS.",
+    "module": 6
+  },
+  {
     "question": "How do I test associated models?",
     "answer": "When testing a model that <i>belongs_to</i> another model you have to remember creating the model it belongs to. You can create both in your 'before' block like this:<p class=\"orange\"> @product = Product.new(name: \"boat\", price 20)<br>@review = @product.reviews.build(rating: 4) </p> Now you will be able to access @review or even @review.product anywhere in your tests.",
     "module": 10
@@ -102,6 +107,11 @@
   {
     "question": "Are there any more free recourses on the internet about AJAX and Rails?",
     "answer": "Rails makes dealing with AJAX relatively easy. But there are some good recourses you might want to take a look at:<br> <ul><li><a href=\"https://www.youtube.com/watch?v=FBxVN7U1Qsk\" target=\"blank\">RailsCast about AJAX</a></li> <li><a href=\"http://www.gotealeaf.com/blog/the-detailed-guide-on-how-ajax-works-with-ruby-on-rails\" target=\"blank\">Short AJAX and Rails tutorial</a></li> </ul><br>",
+    "module": 12
+  },
+  {
+    "question": "How do I do associations with FactoryGirl?",
+    "answer": "In the official <a href=\"https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md#associations\" target=\"blank\">FactoryGirl documentation</a> you find instructions on how to use associations.",
     "module": 12
   }
 ]
