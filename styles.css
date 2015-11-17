@@ -5,28 +5,28 @@
 /* -------------------------- */
 
 /* PAGE LAYOUT */
-#questions {
+#titles {
   padding-bottom: 20px;
   background-color: #f5f5f5;
 }
 
-#questions md-content, #questions .md-subheader {
+#titles md-content, #titles .md-subheader {
   background-color: transparent;
 }
 
-#questions button:hover {
+#titles button:hover {
   background-color: rgba(255,255,255,0.4)
 }
 
-#questions md-list-item {
+#titles md-list-item {
   border-bottom: 1px solid #ddd;
 }
 
-#questions p {
+#titles p {
   line-height: 1.2em;
 }
 
-#answers {
+#articles {
   background-color: #fff;
 }
 
