@@ -19,7 +19,11 @@
 
       //for each post: push post to the scope array of all posts
       for(i=0;i<$scope.posts.length;++i){
-        $http.get("posts/" + $scope.posts[i].date + $scope.posts[i].number + "_" + $scope.posts[i].name + ".md")
+        var current_post = $scope.posts[i];
+        var date = $scope.posts[i].date.replace(/-/g, "");
+        var name = $scope.posts[i].name.replace(/\s+/g, '_').toLowerCase();
+
+        $http.get("posts/" + date + current_post.number + "_" + name + ".md")
         .then(function(post){
           $scope.all_posts.unshift(post.data);//unshift = reversed push
         });
