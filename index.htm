@@ -25,7 +25,7 @@
 		<md-content><!-- MAIN  markdown-to-html="test" -->
 			<div id="titles" layout="row" layout-align="center start" ng-cloak><!-- TITLES -->
 				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60">
-					<md-list-item class="md-2-line" ng-repeat="q in posts | orderBy:'module'" ng-click="scroll($index)">
+					<md-list-item class="md-2-line" ng-repeat="q in posts | orderBy:'date':true" ng-click="scroll($index)">
 						<md-icon>subject</md-icon>
 						<div class="md-list-item-text" ng-class="md-offset">
 							<h3>{{q.name}}</h3>
