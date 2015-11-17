@@ -17,12 +17,11 @@
     $http.get('posts.json').success(function(data){
       $scope.posts = data; //save the data to scope
 
-      //for each post: push post to the scope array of all posts
       $scope.posts.forEach(function(post){
         //add slug to posts JSON
         post.slug = post.name.replace(/\s+/g, '-').toLowerCase();
 
-        $http.get("posts/" + post.date.replace(/-/g, "") + post.number + "_" + post.name.replace(/\s+/g, '_').toLowerCase() + ".md")
+        $http.get("posts/" + post.date.replace(/-/g, "") + post.number + "-" + post.slug + ".md")
         .success(function(p){
           $scope.all_posts.unshift({
             post: p,
