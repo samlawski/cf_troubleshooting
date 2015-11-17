@@ -39,35 +39,25 @@
 }
 /* -------------------------- */
 
-/* ANSWER HELPER CLASSES */
-.indent1 {
-  margin-left: 1em;
-}
+/* MARKDOWN STYLING */
 
-.indent2 {
-  margin-left: 2em;
-}
-
-.indent3 {
-  margin-left: 3em;
-}
-
-.indent4 {
-  margin-left: 4em;
-}
-
-.red {
+code {
   color: tomato;
+  background-color: #eee;
+  padding: 2px 4px;
+  border-radius: 2px;
 }
-.blue {
-  color: blue;
+
+pre {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;
 }
-.orange {
-  color: orange;
-}
-.green {
-  color: green;
-}
-.pink {
-  color: pink;
+
+pre code {
+  display: block;
+  padding: 10px 5px;
+  color: brown;
 }

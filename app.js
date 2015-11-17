@@ -18,7 +18,7 @@
       $scope.posts = data; //save the data to scope
 
       //for each post: push post to the scope array of all posts
-      for(i=0;i<$scope.posts.length;++i){
+      for(i=0; i<$scope.posts.length; ++i){
         var current_post = $scope.posts[i];
         var date = $scope.posts[i].date.replace(/-/g, "");
         var name = $scope.posts[i].name.replace(/\s+/g, '_').toLowerCase();

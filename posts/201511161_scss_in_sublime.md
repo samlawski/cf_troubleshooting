@@ -1,14 +1,17 @@
-#### Sublime
+## Sublime
 
 Regarding your question about the CSS colors in Sublime:
 It took me a moment to understand what you mean :simple_smile: In Rails you are using `.scss` files and Sublime doesn’t have a default color formatting for SCSS. So to get it be formatted nicely you will have to install a package for SCSS formatting. Doing that is a little complicated in Sublime but doable:
 First we need to install “Package Control” which allows us to add more addon packages to Sublime. To do that open Sublime (the file that’s open doesn’t matter).
+
 1. Press `Ctrl` + \` or in the top menu click on “View” and then on “Show Console”
 2. Now in your Sublime window at the bottom a console will show up.
 In the small text field at the bottom paste the following code and press `Enter` afterwards:
+
 ```
 import urllib2,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation’)
 ```
+
 (If you are using Sublime 3 instead, let me know. This might not work then)
 3. Great. Now Package Control is installed. Close Sublime completely and start it again.
 4. After you opened Sublime again in the top menu at the top left, click on “Sublime Text 2”, then click on “Preferences” and then on “Package Control” (at the bottom)
