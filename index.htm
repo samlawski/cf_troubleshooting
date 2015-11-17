@@ -25,7 +25,7 @@
 		<md-content><!-- MAIN  markdown-to-html="test" -->
 			<div id="titles" layout="row" layout-align="center start" ng-cloak><!-- TITLES -->
 				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60">
-					<md-list-item class="md-2-line" ng-repeat="q in posts | orderBy:'date':true" ng-click="scroll($index)">
+					<md-list-item class="md-2-line" ng-repeat="q in posts | orderBy:'date':true" ng-click="scroll(q.slug)">
 						<md-icon>subject</md-icon>
 						<div class="md-list-item-text" ng-class="md-offset">
 							<h3>{{q.name}}</h3>
@@ -37,9 +37,11 @@
 
 			<div id="articles" class="md-whiteframe-z3" layout="row" layout-align="center start" ng-cloak><!-- ARTICLES -->
 				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60" layout-padding>
-          <div ng-repeat="post in all_posts" id="{{$index}}">
-						<md-card>
-							<md-content layout-padding markdown-to-html="post">
+          <div ng-repeat="post in all_posts">
+						<md-card id="{{post.slug}}">
+							<span layout-padding>{{post.date | date}}</span>
+							<h1 layout-padding>{{post.name}}</h1>
+							<md-content layout-padding markdown-to-html="post.post">
 							</md-content>
 						</md-card>
 					</div>

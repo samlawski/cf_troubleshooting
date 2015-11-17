@@ -18,17 +18,21 @@
       $scope.posts = data; //save the data to scope
 
       //for each post: push post to the scope array of all posts
-      for(i=0; i<$scope.posts.length; ++i){
-        var current_post = $scope.posts[i];
-        var date = $scope.posts[i].date.replace(/-/g, "");
-        var name = $scope.posts[i].name.replace(/\s+/g, '_').toLowerCase();
+      $scope.posts.forEach(function(post){
+        //add slug to posts JSON
+        post.slug = post.name.replace(/\s+/g, '-').toLowerCase();
 
-        $http.get("posts/" + date + current_post.number + "_" + name + ".md")
-        .then(function(post){
-          $scope.all_posts.unshift(post.data);//unshift = reversed push
-        });
-      };
-    });
+        $http.get("posts/" + post.date.replace(/-/g, "") + post.number + "_" + post.name.replace(/\s+/g, '_').toLowerCase() + ".md")
+        .success(function(p){
+          $scope.all_posts.unshift({
+            post: p,
+            date: post.date,
+            name: post.name,
+            slug: post.slug
+          });//unshift = reversed push
+        });//sucess
+      });//loop
+    });//http get
 
     //link to answers:
     $scope.scroll = function(id){
