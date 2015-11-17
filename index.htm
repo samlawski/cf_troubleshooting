@@ -37,11 +37,11 @@
 
 			<div id="articles" class="md-whiteframe-z3" layout="row" layout-align="center start" ng-cloak><!-- ARTICLES -->
 				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60" layout-padding>
-          <div ng-repeat="post in all_posts">
+          <div ng-repeat="post in posts | orderBy:'date':true">
 						<md-card id="{{post.slug}}">
 							<span layout-padding>{{post.date | date}}</span>
 							<h1 layout-padding>{{post.name}}</h1>
-							<md-content layout-padding markdown-to-html="post.post">
+							<md-content layout-padding markdown-to-html="post.article">
 							</md-content>
 						</md-card>
 					</div>
