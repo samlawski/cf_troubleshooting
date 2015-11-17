@@ -38,16 +38,6 @@
       //$location.hash("");
     };
 
-    //show subheaders
-    // $scope.previousModule = 0;
-    //
-    // $scope.showModule = function(module){
-    //   showHeader = (module!=$scope.previousModule);
-    //   //console.log(showHeader);
-    //   $scope.previousModule = module;
-    //   return showHeader;
-    // };
-
   }]); //controller
 
 })(); // app
