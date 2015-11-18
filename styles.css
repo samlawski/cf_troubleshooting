@@ -12,7 +12,7 @@
   background-color: #f5f5f5;
 }
 
-#titles md-content, #titles .md-subheader {
+#titles md-content {
   background-color: transparent;
 }
 
@@ -22,10 +22,6 @@
 
 #titles md-list-item {
   border-bottom: 1px solid #ddd;
-}
-
-#titles p {
-  line-height: 1.2em;
 }
 
 #articles {
