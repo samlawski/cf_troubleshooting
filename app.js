@@ -17,9 +17,10 @@
       $scope.posts.forEach(function(post){
         //add slug property to post:
         post.slug = post.name.replace(/\s+/g, '-').toLowerCase();
+        post.path = "posts/" + post.date.replace(/-/g, "") + post.number + "-" + post.slug + ".md";
 
         //add markdown file as article property:
-        $http.get("posts/" + post.date.replace(/-/g, "") + post.number + "-" + post.slug + ".md")
+        $http.get(post.path)
         .success(function(p){
           post.article = p;
         });//sucess
