@@ -44,16 +44,19 @@ code {
   border-radius: 2px;
 }
 
-pre {
+pre code {
+  display: block;
+  padding: 10px 5px;
+  color: brown;
+  overflow: scroll;
+}
+
+pre code.no-scroll {
   white-space: pre-wrap;       /* css-3 */
   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;
-}
 
-pre code {
-  display: block;
-  padding: 10px 5px;
-  color: brown;
+  overflow: hidden;
 }

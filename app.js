@@ -2,7 +2,7 @@
   var app = angular.module('app', ['ngMaterial', 'ngSanitize', 'ng-showdown']).config(
     function($mdThemingProvider){
       $mdThemingProvider.theme('default')
-        .primaryPalette('cyan')
+        .primaryPalette('lime')
         .accentPalette('blue-grey');
     }
   );
