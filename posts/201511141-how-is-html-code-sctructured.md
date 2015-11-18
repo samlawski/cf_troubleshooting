@@ -1,14 +1,12 @@
 ## Review HTML syntax
 
-About the second question:
-You are mixing up ERB and HTML code now. I understand, this can be a little confusing when you are learning both at the same time. You have to try separating them in your head though. Let’s forget about ERB (Ruby code) for a moment and only focus on HTML and review what you have learned so far:
 This is what HTML tags look like: `< … >`.
 Usually HTML tags have an opening and a closing tag like this: `<…> </…>`.
-Now all HTML tags have a name. They are called something like `html`, `body`, `div`, `p`, `a`, `table`, `h1`, `h2`, `tr`, `td` and much more. Here is an overview over the most important HTML tags: http://overapi.com/html/
-Don’t worry: It’s not necessary and uncommon to know all of them! It’s good to know the most basic and common ones. The rest you should just know where to look up. No course can teach all of them (well it could… but it’s not really necessary).
+Now all HTML tags have a name. They are called something like `html`, `body`, `div`, `p`, `a`, `table`, `h1`, `h2`, `tr`, `td` and much more. [Here](http://overapi.com/html/) is an overview over the most important HTML tags.
+Don’t worry: It’s not necessary to know all of them! It’s good to know the most basic and common ones. The rest you should just know where to look up. No course can teach all of them (well it could… but it’s not really necessary).
 Alright. So all HTML tags look sort of like this: `<h1> Some text </h1>`
 All HTML tags come predefined with some styling. So `h1` for example will add some padding and a big font size to its content. `<span></span>` will make its content `display: inline;` and `<div></div>` on the other hand has `display: block;` applied by default.
-Now _ALL_ HTML elements can have so called **attributes** (remember this word!). Attributes are _always_ added to the opening tag and add additional information or functionality to the HTML tag. Attributes also always have the same basic syntax:
+Now _ALL_ HTML elements can have so called **attributes**. Attributes are _always_ added to the opening tag and add additional information or functionality to the HTML tag. Attributes also always have the same basic syntax:
 `attribute="value"`
 First the attribute name, then an equal sign `=` and then in quotes a value. Here an example:
 
@@ -25,9 +23,4 @@ A quick reminder: Each HTML element can only have a single ID (attribute value) 
 
 The above example has 5 classes: `class1`, `class2`, `class3`, `another-class`, `one-more-class`.
 
-Alright. So this is how HTML syntax works. Always. So if you want to apply the class `crazy` to the `tr` HTML element and the class `loco` to the `h2` element they would have to look like this:
-
-```
-<tr class="crazy">
-  <h2 class="loco">...
-```
+Alright. So this is how HTML syntax works. Always. 

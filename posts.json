@@ -1,21 +1,21 @@
 [
   {
     "number": "1",
-    "date": "2015-11-16",
-    "name": "SCSS in Sublime"
+    "date": "2015-11-10",
+    "name": "How to add color formatting for SCSS in Sublime"
   },
   {
     "number": "1",
-    "date": "2015-11-17",
-    "name": "HTML tags"
-  },
-  {
-    "number": "1",
-    "date": "2015-11-18",
-    "name": "ERB tags"
+    "date": "2015-11-14",
+    "name": "How is HTML code sctructured"
   },
   {
     "number": "2",
+    "date": "2015-11-14",
+    "name": "How does ERB code work together with HTML"
+  },
+  {
+    "number": "1",
     "date": "2015-11-18",
     "name": "How to indent"
   }
