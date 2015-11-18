@@ -21,7 +21,7 @@
 		<md-content><!-- MAIN  markdown-to-html="test" -->
 			<div id="titles" layout="row" layout-align="center start" ng-cloak><!-- TITLES -->
 				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60">
-					<md-list-item class="md-2-line" ng-repeat="q in posts">
+					<md-list-item class="md-2-line" ng-repeat="q in posts | orderBy:'date':true">
 						<md-icon>folder</md-icon>
 						<div class="md-list-item-text" ng-class="md-offset">
 							<h3>{{q.name}}</h3>
