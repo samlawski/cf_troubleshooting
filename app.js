@@ -31,6 +31,8 @@
     $scope.scroll = function(id){
       $location.hash(id);
       $anchorScroll();
+      // reset url:
+      $location.hash("");
     };
 
   }]); //controller
