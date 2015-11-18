@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html ng-app="app">
 	<head>
-      <title>CF: Troubleshooting</title>
+		<meta name="viewport" content="initial-scale=1" />
+		<title>WebDev Beginner's Guide</title>
 
-			<!-- Angular Material -->
-			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
-			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-			<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
+		<!-- Angular Material -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
 
-      <link type="text/css" rel="stylesheet" href="styles.css">
-
-    	<meta name="viewport" content="initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body ng-controller="faqCtrl" layout="column">
 		<md-toolbar class="md-toolbar-tools md-whiteframe-z1">
-			<h1>Troubleshooting common problems</h1>
+			<h1>WebDev Beginner's Guide</h1>
 			<span flex></span>
 			<h2 hide-sm ng-cloak>Contribute:</h2>
 			<a href="https://github.com/jimbroski/cf_troubleshooting" target="blank" md-button class="md-icon-button" ng-cloak>
@@ -23,50 +22,53 @@
 			</a>
 		</md-toolbar>
 
-		<md-content><!-- MAIN -->
-			<div id="questions" layout="row" layout-align="center start" ng-cloak><!-- QUESTIONS -->
+		<md-content><!-- MAIN  markdown-to-html="test" -->
+			<div id="titles" layout="row" layout-align="center start" ng-cloak><!-- TITLES -->
 				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60">
-					<md-list>
-						<md-list-item ng-repeat="q in faq | orderBy:'module'" ng-click="scroll($index)" layout="row">
-							<md-subheader layout="column" flex="20"><span ng-hide="q.module == 0">M. {{q.module}}</span></md-subheader>
-							<p layout="column" flex="90">{{q.question}}</p>
-						</md-list-item>
-					</md-list>
+					<md-list-item class="md-2-line" ng-repeat="q in posts | orderBy:'date':true" ng-click="scroll(q.slug)">
+						<md-icon>subject</md-icon>
+						<div class="md-list-item-text" ng-class="md-offset">
+							<h3>{{q.name}}</h3>
+							<span class="md-caption">{{q.date | date}}</span>
+						</div>
+					</md-list-item>
 				</md-content>
-			</div><!-- //QUESTIONS -->
+			</div><!-- //TITLES -->
 
-			<div id="answers" class="md-whiteframe-z3" layout="row" layout-align="center start" ng-cloak><!-- ANSWERS -->
+			<div id="articles" class="md-whiteframe-z3" layout="row" layout-align="center start" ng-cloak><!-- ARTICLES -->
 				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60" layout-padding>
-					<div ng-repeat="a in faq | orderBy:'module'" id="{{$index}}">
-						<!-- TODO fix showing module headers -->
-						<md-subheader ng-show="showModule(a.module)">Module {{a.module}}</md-subheader>
-						<md-card>
-							<md-content layout-padding>
-								<h3>{{a.question}}</h3>
-								<p ng-bind-html="a.answer"></p>
+          <div ng-repeat="post in posts | orderBy:'date':true">
+						<md-card layout-padding id="{{post.slug}}">
+							<h1>{{post.name}}</h1>
+
+							<md-divider></md-divider>
+							<md-content markdown-to-html="post.article">
 							</md-content>
+
+							<span class="md-caption">- {{post.date | date}}</span>
 						</md-card>
 					</div>
 				</md-content>
-			</div><!-- //ANSWERS -->
+			</div><!-- //ARTICLES -->
 		</md-content><!-- //MAIN -->
 
-		<md-button id="backtotop" ng-click="scroll('questions')" class="md-fab" aria-label="FAB" ng-cloak>
+		<md-button id="backtotop" ng-click="scroll('titles')" class="md-fab" aria-label="FAB" ng-cloak>
 			<md-icon>keyboard_arrow_up</md-icon>
 		</md-button>
 
 
 		<!-- Javascript Dependencies -->
-		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-sanitize.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
 
-		<!-- Javascript custom -->
+		<script type="text/javascript" src="bower_components/showdown/dist/showdown.min.js"></script>
+		<script type="text/javascript" src="bower_components/ng-showdown/dist/ng-showdown.min.js"></script>
+
+		<!-- Javascript Custom -->
 		<script type="text/javascript" src="app.js"></script>
 
   </body>
