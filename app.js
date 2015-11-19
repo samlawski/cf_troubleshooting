@@ -7,7 +7,7 @@
     }
   ); // :end angular.module
 
-  app.controller('faqCtrl', ['$scope', '$http', '$location', '$anchorScroll', '$showdown', function($scope, $http, $location, $anchorScroll, $showdown){
+  app.controller('postsCtrl', ['$scope', '$http', '$location', '$anchorScroll', '$showdown', function($scope, $http, $location, $anchorScroll, $showdown){
     // == get the file that contains the information about all the posts:
     $http.get('posts.json').then(function(posts){
       $scope.posts = posts.data; // :with '.then' 'posts' is an object
