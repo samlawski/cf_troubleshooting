@@ -1,5 +1,15 @@
 [
   {
+    "number": "1",
+    "date": "2015-12-02",
+    "name": "How to add attributes to ERB tags"
+  },
+  {
+    "number": "1",
+    "date": "2015-11-27",
+    "name": "Model View Controller on Rails 1"
+  },
+  {
     "number": "2",
     "date": "2015-11-18",
     "name": "How to build a products overview with bootstrap in Rails"
