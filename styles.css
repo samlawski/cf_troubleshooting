@@ -56,6 +56,10 @@ pre code {
   word-wrap: normal;
 }
 
+pre code::-webkit-scrollbar {
+    display: none;
+}
+
 pre code.no-scroll {
   white-space: pre-wrap;       /* css-3 */
   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
