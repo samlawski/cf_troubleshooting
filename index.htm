@@ -11,7 +11,7 @@
 
 		<link rel="stylesheet" type="text/css" href="styles.css">
   </head>
-  <body ng-controller="faqCtrl" layout="column">
+  <body ng-controller="postsCtrl" layout="column">
 		<md-toolbar class="md-toolbar-tools md-whiteframe-z1">
 			<h1>WebDev Beginner's Guide</h1>
 			<span flex></span>
@@ -22,7 +22,7 @@
 			</a>
 		</md-toolbar>
 
-		<md-content><!-- MAIN  markdown-to-html="test" -->
+		<md-content><!-- MAIN -->
 			<div id="titles" layout="row" layout-align="center start" ng-cloak><!-- TITLES -->
 				<md-content flex="100" flex-gt-sm="70" flex-gt-md="60">
 					<md-list-item class="md-2-line" ng-repeat="q in posts | orderBy:'path':true" ng-click="scroll(q.slug)">
