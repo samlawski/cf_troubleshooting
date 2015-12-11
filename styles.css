@@ -52,7 +52,7 @@ pre code {
   display: block;
   padding: 10px 5px;
   color: brown;
-  overflow: scroll;
+  overflow: auto;
   word-wrap: normal;
 }
 
