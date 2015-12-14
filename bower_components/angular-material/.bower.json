@@ -11,14 +11,13 @@
     "angular-material.css"
   ],
   "homepage": "https://github.com/angular/bower-material",
-  "_release": "33c897cb4e",
+  "_release": "d4d81bb2bc",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "33c897cb4eb85b8bee08900786f384f75876fafb"
+    "commit": "d4d81bb2bceb8ff34429323d28520f7b03227582"
   },
   "_source": "git://github.com/angular/bower-material.git",
   "_target": "master",
-  "_originalSource": "angular-material",
-  "_direct": true
+  "_originalSource": "angular-material"
 }
