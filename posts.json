@@ -1,6 +1,11 @@
 [
   {
     "number": "1",
+    "date": "2015-12-14",
+    "name": "How to send a confirmation email on sign up with Devise"
+  },
+  {
+    "number": "1",
     "date": "2015-12-02",
     "name": "How to add attributes to ERB tags"
   },
