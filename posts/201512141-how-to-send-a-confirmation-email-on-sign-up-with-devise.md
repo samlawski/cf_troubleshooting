@@ -8,7 +8,7 @@ User sign up is handled by the Devise gem and its own controller. The controller
 
 In your **app/controllers** directory go ahead and create a new controller. The name doesn't really matter but the class name should be the same as the file name (only the file name needs to be all lower case and separated with underscores and the class name needs to be CamelCase).
 
-I called the file: **user_registrations_controller.rb**
+I called the file: **user\_registrations\_controller.rb**
 
 And this should be inside that file:
 
@@ -79,4 +79,4 @@ The email template has to have the same name as the method we just created. So i
 
 See how in our example we access `@appname`? We can do that because we assigned that variable inside the `welcome` method earlier.
 
-Now your email is ready to be delivered and if a user signs up an email will be delivered to her/his email address. 
+Now your email is ready to be delivered and if a user signs up an email will be delivered to her/his email address.
